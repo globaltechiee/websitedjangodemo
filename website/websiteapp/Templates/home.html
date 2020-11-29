@@ -1,8 +1,7 @@
 {% load static %}
 
 <!--We need to add a tag to every img, js and css that is on this file
-with this below-->
-{% static 'websiteapp/'%}
+with this below -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,13 +12,13 @@ with this below-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>Dento - Dentist &amp; Medical HTML Template</title>
+  <title>Dento - Dentist &amp; Medical</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="./img/core-img/favicon.ico">
+  <link rel="icon" href="{% static '/img/core-img/favicon.ico' %}">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static '/style.css' %}">
 
 </head>
 
