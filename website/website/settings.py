@@ -125,3 +125,26 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# testing localhost for email
+EMAIL_HOST = 'LOCALHOST'
+EMAIL_PORT = 1025
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+# below depends what the email srv uses TLS or SSL
+EMAIL_USE_TLS = False
+
+# code below to run in terminal for local email srv to work
+#python -m smtpd -n -c DebuggingServer localhost:1025
+# email owner e.g. for gmail will need to allow app access 
+# toggle option for it to work
+# below is for production
+'''
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'cuttycorp@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+# below depends what the email srv uses TLS or SSL
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+'''
